@@ -21,13 +21,14 @@ namespace API.Controllers
             _context = context;
         }
 
+        // https://localhost:5001/api/users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
         {
             return await _context.Users.ToListAsync();
         }
 
-        // api/users/2
+        // https://localhost:5001/api/users/2
         [HttpGet("{id}")]
         public async Task<ActionResult<AppUser>> GetUser(int id)
         {
