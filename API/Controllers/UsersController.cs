@@ -22,6 +22,7 @@ namespace API.Controllers
         }
 
         // https://localhost:5001/api/users
+        // Added more comments just to learn Git
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
         {
